@@ -4,6 +4,7 @@
  */
 
 var _ = require('lodash');
+var util = require('./lib/util');
 var extractor = require('./lib/extractor');
 
-module.exports = exports = _.assign({}, extractor);
+module.exports = exports = _.assign({}, util, extractor);
