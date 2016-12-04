@@ -3,9 +3,22 @@
  * @author sparklewhy@gmail.com
  */
 
-var _ = require('lodash');
 var util = require('./lib/util');
 var html = require('./lib/html');
 var extractor = require('./lib/extractor');
 
-module.exports = exports = _.assign({}, util, html, extractor);
+function assign(target) {
+    var srcs = [].slice.call(arguments, 1);
+    srcs.forEach(function (item) {
+        var keys = Object.keys(item);
+        for (var i = 0, len = keys.length; i < len; i++) {
+            var k = keys[i];
+            if (item.hasOwnProperty(k)) {
+                target[k] = item[k];
+            }
+        }
+    });
+    return target;
+}
+
+module.exports = exports = assign({}, util, html, extractor);
