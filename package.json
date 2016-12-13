@@ -1,6 +1,6 @@
 {
   "name": "fisx-helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "provide some useful utilities for fisx",
   "main": "index.js",
   "scripts": {
