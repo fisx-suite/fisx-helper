@@ -5,6 +5,7 @@
 
 var util = require('./lib/util');
 var html = require('./lib/html');
+var css = require('./lib/css');
 var extractor = require('./lib/extractor');
 
 function assign(target) {
@@ -21,4 +22,4 @@ function assign(target) {
     return target;
 }
 
-module.exports = exports = assign({}, util, html, extractor);
+module.exports = exports = assign({}, util, html, css, extractor);
